@@ -21,7 +21,7 @@ app.use("/api/storefleet/user", userRoutes);
 app.use("/api/storefleet/order", orderRoutes);
 // errorHandlerMiddleware
 app.use(errorHandlerMiddleware);
-app.use("/" , (req,res)=>{
+app.get("/" , (req,res)=>{
    res.send("welcom")
 })
 export default app;
