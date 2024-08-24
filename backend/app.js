@@ -19,8 +19,9 @@ app.use(cookieParser());
 app.use("/api/storefleet/product", productRoutes);
 app.use("/api/storefleet/user", userRoutes);
 app.use("/api/storefleet/order", orderRoutes);
-
 // errorHandlerMiddleware
 app.use(errorHandlerMiddleware);
-
+app.use("/" , (req,res)=>{
+   res.send("welcom")
+})
 export default app;
